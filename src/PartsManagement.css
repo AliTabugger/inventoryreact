@@ -1,0 +1,229 @@
+/* Parts Management Page */
+.parts-management {
+  padding: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.add-part-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+/* Search Section */
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  max-width: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  border-right: none;
+  padding: 0.75rem 1rem;
+}
+
+.search-input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.search-btn {
+  border-left: none;
+  padding: 0 1.25rem;
+  background-color: #f8f9fa;
+}
+
+.search-btn:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+/* Parts Grid */
+.parts-grid {
+  margin-top: 1rem;
+}
+
+.part-col {
+  margin-bottom: 1.5rem;
+}
+
+.part-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.part-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.part-image-container {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.part-image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.part-body {
+  padding: 1.25rem;
+}
+
+.part-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.part-details {
+  margin-top: 1rem;
+}
+
+.part-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.detail-icon {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.part-footer {
+  background-color: transparent;
+  border-top: none;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* Modal Styles */
+.part-modal .modal-content {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-header .modal-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  border-radius: 6px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.form-input:focus {
+  border-color: #d92323;
+  box-shadow: 0 0 0 0.25rem rgba(217, 35, 35, 0.1);
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.cancel-btn, .save-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .search-input-group {
+    max-width: 100%;
+  }
+  
+  .part-image-container {
+    height: 150px;
+  }
+}

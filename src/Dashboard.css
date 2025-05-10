@@ -1,0 +1,182 @@
+/* Reset link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* Main container */
+.dashboard-container {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #1a1a1a;
+  
+  color: white;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  background-color: #d92323;
+  color: white;
+}
+
+.brand-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.divider {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+}
+
+/* Navigation menu */
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem 0.5rem;
+  color: #e0e0e0;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.nav-item.active {
+  background-color: rgba(217, 35, 35, 0.2);
+  border-left: 3px solid #d92323;
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.nav-text {
+  font-weight: 500;
+}
+
+/* Logout button */
+.logout-item {
+  margin-top: auto;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+.logout-item:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* Main content area */
+.main-content {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Parts Management Page */
+.management-page {
+  padding: 2rem;
+}
+
+/* Part Cards */
+.part-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.part-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.part-image-container {
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.part-image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.part-detail {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+}
+
+.part-detail i {
+  color: #d92323;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .part-image-container {
+    height: 150px;
+  }
+}
+
+
+  
+}
+
+

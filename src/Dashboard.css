@@ -29,6 +29,8 @@ a {
   padding: 1.5rem;
   background-color: #d92323;
   color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .brand-title {
@@ -178,5 +180,7 @@ a {
 
   
 }
+
+
 
 

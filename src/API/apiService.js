@@ -199,6 +199,51 @@ const apiService = {
       throw error;
     }
   },
+  adjustStock: async (request) => {
+    try {
+      const response = await axios.post(
+        `${API_BASE_URL}/adjust-stock`,
+        request,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Failed to adjust stock:", error);
+      throw error;
+    }
+  },
+  dashboardStats: async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/dashboard-stats`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Failed to fetch dashboard stats:", error);
+      throw error;
+    }
+  },
+
+  salesPerPart: async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/sales-per-part`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Failed to fetch sales per part:", error);
+      throw error;
+    }
+  },
 };
 
 export default apiService;

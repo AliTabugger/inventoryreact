@@ -10,6 +10,7 @@ import {
   FiHome,
 } from "react-icons/fi";
 import "./Dashboard.css";
+import logo from "./assets/logo.png";
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -29,6 +30,12 @@ const DashboardLayout = () => {
       <Row className="sidebar-sticky">
         <Col md={2} className="sidebar p-0 ">
           <div className="sidebar-header">
+            <img
+              src={logo}
+              alt="Logo"
+              className="sidebar-logo"
+              style={{ width: "100px", height: "60px", objectFit: "contain" }}
+            />
             <h3 className="brand-title">MOTOR PARTS PRO</h3>
             <div className="divider"></div>
           </div>
@@ -60,6 +67,13 @@ const DashboardLayout = () => {
             >
               <FiTruck className="nav-icon" />
               <span className="nav-text">Manage Suppliers</span>
+            </Link>
+            <Link
+              to="/dashboard/sales"
+              className={`nav-item ${isActive("/dashboard/sales") ? "active" : ""}`}
+            >
+              <FiGrid className="nav-icon" />
+              <span className="nav-text">Sales</span>
             </Link>
             <div className="nav-item logout-item" onClick={handleLogout}>
               <FiLogOut className="nav-icon" />

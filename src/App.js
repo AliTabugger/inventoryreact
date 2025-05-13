@@ -8,6 +8,7 @@ import PartsManagement from "./PartsManagement";
 import CategoriesManagement from "./CategoriesManagement";
 import SuppliersManagement from "./SuppliersManagement";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SalesPage from "./SalesPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               path="/dashboard/suppliers"
               element={<SuppliersManagement />}
             />
+            <Route path="/dashboard/sales" element={<SalesPage />} />
           </Route>
         </Route>
       </Routes>
